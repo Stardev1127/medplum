@@ -1,0 +1,25 @@
+---
+title: Immunization
+sidebar_position: 61
+---
+
+import definition from '@site/static/data/resourceDefinitions/immunization.json';
+import { ResourcePropertiesTable, SearchParamsTable } from '@site/src/components/ResourceTables';
+
+# Immunization
+
+Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party. Refer to the [US Core Immunizations profile](https://hl7.org/fhir/us/core/stu3.1.1/StructureDefinition-us-core-immunization.html).
+
+## Properties
+
+<ResourcePropertiesTable
+  properties={definition.properties.filter((p) => !(p.inherited && p.base.includes('Resource')))}
+/>
+
+## Search Parameters
+
+<SearchParamsTable searchParams={definition.searchParameters} />
+
+## Inherited Properties
+
+<ResourcePropertiesTable properties={definition.properties.filter((p) => p.inherited && p.base.includes('Resource'))} />

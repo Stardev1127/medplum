@@ -1,0 +1,50 @@
+.DS_Store
+
+# Local files for FileSystemBinaryStorage
+binary/
+
+# Node/npm
+node_modules/
+
+# Dotenv
+.env
+
+# Output
+packages/app/dist/
+packages/cdk/dist/
+packages/cli/dist/
+packages/core/dist/
+packages/core/docs/
+packages/definitions/dist/**/*.js
+packages/definitions/dist/**/*.js.map
+packages/definitions/dist/**/*.d.ts
+packages/examples/dist/
+packages/fhir-router/dist/
+packages/generator/dist/
+packages/generator/output/
+packages/graphiql/dist/
+packages/graphiql/public/
+packages/mock/dist/
+packages/react/dist/
+packages/server/dist/
+
+# Storybook output
+storybook-static/
+
+# Jest code coverage
+coverage/
+
+# TypeScript incremental build
+tsconfig.tsbuildinfo
+
+# Server tarball
+medplum-server.tar.gz
+
+# VSCode
+.vscode/
+
+# Turborepo
+.turbo
+
+# Rollup
+.rollup.cache/

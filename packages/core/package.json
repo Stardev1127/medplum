@@ -1,0 +1,54 @@
+{
+  "name": "@medplum/core",
+  "version": "2.0.8",
+  "description": "Medplum TS/JS Library",
+  "author": "Medplum <hello@medplum.com>",
+  "license": "Apache-2.0",
+  "homepage": "https://www.medplum.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/medplum/medplum.git",
+    "directory": "packages/core"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc --project tsconfig.build.json && rollup --config rollup.config.mjs",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@medplum/definitions": "*",
+    "@medplum/fhirtypes": "*"
+  },
+  "peerDependencies": {
+    "pdfmake": "^0.2.5"
+  },
+  "peerDependenciesMeta": {
+    "pdfmake": {
+      "optional": true
+    }
+  },
+  "types": "dist/types/index.d.ts",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "exports": {
+    "types": "./dist/types/index.d.ts",
+    "require": "./dist/cjs/index.cjs",
+    "import": "./dist/esm/index.mjs"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "medplum",
+    "fhir",
+    "healthcare",
+    "interoperability",
+    "json",
+    "serialization",
+    "hl7",
+    "standards",
+    "clinical",
+    "dstu2",
+    "stu3",
+    "r4",
+    "normative"
+  ]
+}

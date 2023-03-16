@@ -1,0 +1,25 @@
+---
+title: CarePlan
+sidebar_position: 13
+---
+
+import definition from '@site/static/data/resourceDefinitions/careplan.json';
+import { ResourcePropertiesTable, SearchParamsTable } from '@site/src/components/ResourceTables';
+
+# CarePlan
+
+Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions. Refer to the [US Core CarePlan profile](https://hl7.org/fhir/us/core/stu3.1.1/StructureDefinition-us-core-careplan.html).
+
+## Properties
+
+<ResourcePropertiesTable
+  properties={definition.properties.filter((p) => !(p.inherited && p.base.includes('Resource')))}
+/>
+
+## Search Parameters
+
+<SearchParamsTable searchParams={definition.searchParameters} />
+
+## Inherited Properties
+
+<ResourcePropertiesTable properties={definition.properties.filter((p) => p.inherited && p.base.includes('Resource'))} />

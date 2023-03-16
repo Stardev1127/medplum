@@ -1,0 +1,53 @@
+{
+  "name": "@medplum/mock",
+  "version": "2.0.8",
+  "description": "Medplum Mock Client",
+  "author": "Medplum <hello@medplum.com>",
+  "license": "Apache-2.0",
+  "homepage": "https://www.medplum.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/medplum/medplum.git",
+    "directory": "packages/mock"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc --project tsconfig.build.json && rollup --config rollup.config.mjs",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@medplum/core": "*",
+    "@medplum/definitions": "*",
+    "@medplum/fhir-router": "*",
+    "@medplum/fhirtypes": "*",
+    "dataloader": "2.2.2",
+    "rfc6902": "5.0.1"
+  },
+  "devDependencies": {
+    "@types/pdfmake": "0.2.2"
+  },
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    "types": "./dist/types/index.d.ts",
+    "require": "./dist/cjs/index.cjs",
+    "import": "./dist/esm/index.mjs"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "medplum",
+    "fhir",
+    "healthcare",
+    "interoperability",
+    "json",
+    "serialization",
+    "hl7",
+    "standards",
+    "clinical",
+    "dstu2",
+    "stu3",
+    "r4",
+    "normative"
+  ]
+}
